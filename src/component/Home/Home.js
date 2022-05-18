@@ -1,5 +1,21 @@
 import React from "react";
+import { useEffect, useSelector } from "react";
+import { useDispatch } from "react-redux";
+import { getMovies } from "../../featuer/movie/movieSlice";
+import { fetchAsynkMovies } from "../../featuer/movie/movieSlice";
+import MovieListing from "../MovieListing/MovieListing";
 
 export default function Home() {
-  return <div>Home</div>;
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAsynkMovies());
+  }, [dispatch]);
+
+  return (
+    <>
+      Home!
+      <MovieListing />
+    </>
+  );
 }
