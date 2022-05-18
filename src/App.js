@@ -5,6 +5,7 @@ import Header from "./component/Header/Header";
 import Footer from "./component/Footer/Footer";
 import PageNotFound from "./component/PageNotFound/PageNotFound";
 import "./App.scss";
+import { Provider } from "react";
 
 function App() {
   return (
