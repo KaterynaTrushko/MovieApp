@@ -15,7 +15,7 @@ function App() {
         <div className="contain">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/movie/:movID" element={<MovieDetails />} />
+            <Route path="/movie/:imdbID" element={<MovieDetails />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </div>
