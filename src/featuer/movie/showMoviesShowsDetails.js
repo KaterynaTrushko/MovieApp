@@ -25,7 +25,11 @@ const initialState = {
 export const showsDetailsSlice = createSlice({
   name: "showsDitails",
   initialState,
-  reducer: {},
+  reducer: {
+    remuveMovieOrShow: (state) => {
+      state = {};
+    },
+  },
   extraReducers: {
     [fetchAsynkDetails.loading]: (state) => {
       state.loading = true;
@@ -46,3 +50,4 @@ export const showsDetailsSlice = createSlice({
 
 export default showsDetailsSlice.reducer;
 export const getDetails = (state) => state.ditails.data;
+export const { remuveMovieOrShow } = showsDetailsSlice.actions;
