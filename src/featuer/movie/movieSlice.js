@@ -6,7 +6,7 @@ export const fetchAsynkMovies = createAsyncThunk(
   "movies/fetchAsynkMovies",
   async () => {
     try {
-      const moviesText = "Star";
+      const moviesText = "war";
       const { data } = await movieApi.get(
         `?apiKey=${APIKey}&s=${moviesText}&type=movie`
       );
