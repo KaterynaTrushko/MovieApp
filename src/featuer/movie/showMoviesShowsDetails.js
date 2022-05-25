@@ -2,12 +2,15 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import movieApi from "../../common/apis/movieApi";
 import { APIKey } from "../../common/apis/movieApiKey";
 
+export const controller = new AbortController();
+
 export const fetchAsynkDetails = createAsyncThunk(
   "showsDitails/fetchAsynkDetails",
   async (id) => {
     try {
       const { data } = await movieApi.get(
-        `?apiKey=${APIKey}&i=${id}&Plot=full`
+        `?apiKey=${APIKey}&i=${id}&Plot=full`,
+        { signal: controller.signal }
       );
       return data;
     } catch (error) {
@@ -27,7 +30,7 @@ export const showsDetailsSlice = createSlice({
   initialState,
   reducer: {
     remuveMovieOrShow: (state) => {
-      state = {};
+      state = initialState;
     },
   },
   extraReducers: {

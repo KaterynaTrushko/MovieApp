@@ -4,6 +4,8 @@ import { getMovies } from "../../featuer/movie/movieSlice";
 import { MovieCard } from "../../component/MovieCard/MovieCard";
 import { getShows } from "../../featuer/movie/showsSlice";
 import "./MoviListing.scss";
+import Slider from "react-slick";
+import { settings } from "./settingSlick";
 
 export default function MovieListing() {
   const movies = useSelector(getMovies);
@@ -37,9 +39,13 @@ export default function MovieListing() {
     <div className="movie-wrapper">
       <div className="movie-list">
         <h2>Movies</h2>
-        <div className="movie-container">{renderMovies}</div>
+        <div className="movie-container">
+          <Slider {...settings}>{renderMovies}</Slider>
+        </div>
         <h2>Shows</h2>
-        <div className="movie-container">{renderShows}</div>
+        <div className="movie-container">
+          <Slider {...settings}>{renderShows}</Slider>
+        </div>
       </div>
     </div>
   );
