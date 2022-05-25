@@ -4,9 +4,8 @@ import { APIKey } from "../../common/apis/movieApiKey";
 
 export const fetchAsynkMovies = createAsyncThunk(
   "movies/fetchAsynkMovies",
-  async () => {
+  async (moviesText) => {
     try {
-      const moviesText = "war";
       const { data } = await movieApi.get(
         `?apiKey=${APIKey}&s=${moviesText}&type=movie`
       );

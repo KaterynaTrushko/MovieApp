@@ -8,9 +8,12 @@ import { fetchAsynkShows } from "../../featuer/movie/showsSlice";
 export default function Home() {
   const dispatch = useDispatch();
 
+  const movie = "man";
+  const show = "war";
+
   useEffect(() => {
-    dispatch(fetchAsynkMovies());
-    dispatch(fetchAsynkShows());
+    dispatch(fetchAsynkMovies(movie));
+    dispatch(fetchAsynkShows(show));
   }, [dispatch]);
 
   return (

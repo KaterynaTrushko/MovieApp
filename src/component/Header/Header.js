@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import user from "../../images/user.png";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import "./Header.scss";
+import { Form } from "../Form/Form";
 
 export default function Header() {
   return (
@@ -10,6 +11,9 @@ export default function Header() {
       <Link to="/">
         <div className="user">Movie App</div>
       </Link>
+      <div>
+        <Form />
+      </div>
       <div className="logo">
         <img className="user-image" src={user}></img>
       </div>

@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { getDetails } from "../../featuer/movie/showMoviesShowsDetails";
 import { remuveMovieOrShow } from "../../featuer/movie/showMoviesShowsDetails";
+import { controller } from "../../featuer/movie/showMoviesShowsDetails";
 
 export default function MovieDetails() {
   const { imdbID } = useParams();
@@ -16,9 +17,9 @@ export default function MovieDetails() {
 
   useEffect(() => {
     dispatch(fetchAsynkDetails(imdbID));
-    // return () => {
-    //   dispatch(remuveMovieOrShow());
-    // };
+    return () => {
+      // controller.abort();
+    };
   }, [dispatch, imdbID]);
 
   let data = useSelector(getDetails);
