@@ -1,14 +1,11 @@
 import React from "react";
 import "./MovieDetails.scss";
-import { MovieCard } from "../MovieCard/MovieCard";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { fetchAsynkDetails } from "../../featuer/movie/showMoviesShowsDetails";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { getDetails } from "../../featuer/movie/showMoviesShowsDetails";
-import { remuveMovieOrShow } from "../../featuer/movie/showMoviesShowsDetails";
-import { controller } from "../../featuer/movie/showMoviesShowsDetails";
 
 export default function MovieDetails() {
   const { imdbID } = useParams();
