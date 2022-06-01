@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchAsynkMovies } from "../../featuer/movie/movieSlice";
 import { fetchAsynkShows } from "../../featuer/movie/showsSlice";
+import "./Form.scss";
+// import { Link } from "react-router-dom";
 
 export function Form() {
   const [searchTitle, setSearchTitle] = useState("");
@@ -30,9 +32,12 @@ export function Form() {
             setSearchTitle(e.target.value);
           }}
         />
+
+        {/* <Link to="/"> */}
         <button>
           <i className="fa fa-search"></i>
         </button>
+        {/* </Link> */}
       </form>
     </>
   );
