@@ -12,10 +12,10 @@ export default function MovieListing() {
   const shows = useSelector(getShows);
   console.log(movies);
   console.log(shows);
-  let renderMovies = "";
-  let renderShows = "";
+  // let renderMovies = "";
+  // let renderShows = "";
 
-  renderMovies =
+  let renderMovies =
     movies.Response === "True" ? (
       movies.Search.map((movie, index) => (
         <MovieCard key={index} data={movie} />
@@ -26,7 +26,7 @@ export default function MovieListing() {
       </div>
     );
 
-  renderShows =
+  let renderShows =
     shows.Response === "True" ? (
       shows.Search.map((show, index) => <MovieCard key={index} data={show} />)
     ) : (

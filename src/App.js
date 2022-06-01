@@ -14,6 +14,7 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/MovieApp" element={<Home />} />
             <Route path="/movie/:imdbID" element={<MovieDetails />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
