@@ -27,7 +27,7 @@ export function Form() {
           type="text"
           value={searchTitle}
           className="searchInput"
-          placeholder="Search Movies or Shows"
+          placeholder="Search Movies"
           onChange={(e) => {
             setSearchTitle(e.target.value);
           }}

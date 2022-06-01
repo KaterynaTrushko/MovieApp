@@ -11,14 +11,10 @@ export default function Home() {
   const movie = "man";
   const show = "war";
 
-  useEffect(
-    () => {
-      dispatch(fetchAsynkMovies(movie));
-      dispatch(fetchAsynkShows(show));
-    },
-    [dispatch],
-    []
-  );
+  useEffect(() => {
+    dispatch(fetchAsynkMovies(movie));
+    dispatch(fetchAsynkShows(show));
+  }, [dispatch]);
 
   return (
     <>
