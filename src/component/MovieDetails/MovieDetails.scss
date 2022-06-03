@@ -40,7 +40,7 @@
 
 
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 350px) {
   .movie-plot {
     text-align: center;
     margin: 15px;
@@ -52,9 +52,9 @@
     color: $font-primary;
     font-weight: 500;
     width: 80px;
-    display: inline-block;
+    margin: 0 auto;
   }
-
+ 
 }
 
 
