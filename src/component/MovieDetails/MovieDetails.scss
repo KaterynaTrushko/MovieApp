@@ -10,6 +10,55 @@
   font-weight: 400;
 }
 
+@media screen and (max-width: 650px) {
+  .movie-section {
+    display: flex;
+    padding: 20px 0px;
+    color: #ffffff;
+    font-weight: 400;
+    align-items: flex-start;
+    align-content: stretch;
+    flex-wrap: wrap;
+  }
+
+  .movie-rating {
+    padding-left: 3px;
+    margin-top: 20px;
+    color: $font-secondary;
+    // display: flex;
+    span {
+      margin-left: 20px;
+    }
+  }
+
+  .movie-title {
+    text-align: center;
+    font-size: 40px;
+    color: $font-primary;
+  }
+}
+
+
+
+@media screen and (max-width: 370px) {
+  .movie-plot {
+    text-align: center;
+    margin: 15px;
+    line-height: 1.8rem;
+  }
+
+  .movie-info {
+    padding: 0px 0px;
+    color: $font-primary;
+    font-weight: 500;
+    width: 80px;
+    display: inline-block;
+  }
+
+}
+
+
+
 .movie-rating {
   padding-left: 3px;
   margin-top: 20px;

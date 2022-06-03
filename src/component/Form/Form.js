@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchAsynkMovies } from "../../featuer/movie/movieSlice";
 import { fetchAsynkShows } from "../../featuer/movie/showsSlice";
+import { useNavigate } from "react-router-dom";
 import "./Form.scss";
 // import { Link } from "react-router-dom";
 
@@ -10,6 +11,11 @@ export function Form() {
   const [searchTitle, setSearchTitle] = useState("");
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const display = () => {
+    navigate("/");
+  };
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -18,6 +24,7 @@ export function Form() {
     dispatch(fetchAsynkMovies(searchTitle));
     dispatch(fetchAsynkShows(searchTitle));
     setSearchTitle("");
+    display();
   };
 
   return (
