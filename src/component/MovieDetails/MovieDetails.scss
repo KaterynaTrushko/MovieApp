@@ -12,6 +12,10 @@
 
 @media screen and (max-width: 650px) {
   .movie-section {
+    display: block;
+  }
+  
+  .movie-section {
     display: flex;
     padding: 20px 0px;
     color: #ffffff;
@@ -37,14 +41,31 @@
     color: $font-primary;
   }
 }
-
-
-
 @media screen and (max-width: 350px) {
+  .movie-section {
+    display: block;
+  }
+  .section-lefy {
+    width: 100%;
+    margin-left: 30px;
+  }
+  .movie-rating {
+    padding-left: 3px;
+    margin-top: 20px;
+    color: $font-secondary;
+    display: flex;
+    span {
+      margin-left: 20px;
+    }
+  }
+
+
   .movie-plot {
-    text-align: center;
+    width: 100%;
     margin: 15px;
-    line-height: 1.8rem;
+    text-align: left;
+    padding-left: 10px;
+  
   }
 
   .movie-info {
@@ -54,10 +75,13 @@
     width: 80px;
     margin: 0 auto;
   }
- 
+
+  .section-right {
+    text-align: center;
+    margin-left: 10px;
+  }
+
 }
-
-
 
 .movie-rating {
   padding-left: 3px;
@@ -74,6 +98,8 @@
   color: $font-primary;
 }
 .movie-plot {
+  width: 100%;
+  padding-left: 10px;
   margin-top: 20px;
   line-height: 1.8rem;
 }
@@ -106,6 +132,11 @@
 }
 
 .section-right {
+  margin-left: 30px;
+}
+
+.section-lefy {
+  width: 100%;
   margin-left: 30px;
 }
 

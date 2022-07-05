@@ -37,7 +37,7 @@ export const movieSlice = createSlice({
       state.isSuccess = true;
       console.log(payload);
     },
-    [fetchAsynkMovies.rejected]: (state, { payload }) => {
+    [fetchAsynkMovies.rejected]: (state) => {
       state.massage = "failed";
     },
   },

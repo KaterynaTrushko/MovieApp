@@ -11,7 +11,7 @@ export const fetchAsynkShows = createAsyncThunk(
       );
       return data;
     } catch (error) {
-      console.lof(error.response);
+      console.log(error.response);
     }
   }
 );
